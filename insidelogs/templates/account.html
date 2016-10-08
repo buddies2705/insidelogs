@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form class="form-horizontal" method="post" action="/account">
+<fieldset>
+<div class="form-group">
+      <label>From Date put in format YYYY/MM/DD</label>
+  <input type="text" name="fromDate" value="{{ request.form.fromDate}}">
+    <br>
+     <label>To Date put in format YYYY/MM/DD</label>
+  <input type="text" name="toDate" value="{{ request.form.toDate}}">
+    <br>
+    <br>
+    <label class="col-md-4 control-label" for = "hours">select Hour</label>
+    <div class="col-md-4">
+        <select id="hours" name="hours" value="{{request.form.hours}}">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            </select>
+        </div>
+    <br>
+    <br>
+<label class="col-md-4 control-label" for="api_picks">Select the Api(s):</label>
+<div class="col-md-4">
+<select id="api_picks" name = "api_picks" multiple="multiple" value="{{request.form.api_picks}}">
+    <option value="login">login</option>
+    <option value="getFeaturesByName">getFeaturesByName</option>
+    <option value="getavailabletrips">getavailabletrips</option>
+    <option value="getAllMyAgents">getAllMyAgents</option>
+    <option value="logout">logout</option>
+    <option value="BotProcessorServer">BotProcessorServer</option>
+    <option value="changePassword">changePassword</option>
+    <option value="getAllReports">getAllReports</option>
+    <option value="fetchMyUsers">fetchMyUsers</option>
+    <option value="confirmBooking">confirmBooking</option>
+    <option value="blockTicket">blockTicket</option>
+    <option value="cancellation">cancellation</option>
+    <option value="doTempBooking2">doTempBooking2</option>
+    <option value="cancelTicket">cancelTicket</option>
+    <option value="blockhotel">blockhotel</option>
+    <option value="getAllStates">getAllStates</option>
+    <option value="forceCancellation">forceCancellation</option>
+    <option value="searchresults">searchresults</option>
+    <option value="CreateBillItems">CreateBillItems</option>
+    <option value="fetchGroupDetails">fetchGroupDetails</option>
+    <option value="getTripExpenseTypes">getTripExpenseTypes</option>
+    <option value="regenerateOTPForAgent">regenerateOTPForAgent</option>
+    <option value="bookTicket">bookTicket</option>
+    <option value="fetchAgencyData">fetchAgencyData</option>
+    <option value="TelecomRecharge">TelecomRecharge</option>
+    <option value="faredetails">faredetails</option>
+    <option value="forgotPassword">forgotPassword</option>
+    <option value="bookHotelRoom">bookHotelRoom</option>
+    <option value="cancelHotelRoom">cancelHotelRoom</option>
+    <option value="updateTicketSale">updateTicketSale</option>
+    <option value="registerForDynamicPrice">registerForDynamicPrice</option>
+    <option value="getFareList">getFareList</option>
+    <option value="setDynamicFare">setDynamicFare</option>
+    <option value="checkEmailAndMobile">checkEmailAndMobile</option>
+    <option value="verifyWebAgentAndCreateUser">verifyWebAgentAndCreateUser</option>
+    <option value="loginWithEmailVerificationLink">loginWithEmailVerificationLink</option>
+    <option value="updateIdProofAndAddressDetails">updateIdProofAndAddressDetails</option>
+    <option value="loginWithOAuth">loginWithOAuth</option>
+    <option value="getAllCities">getAllCities</option>
+    <option value="getConfiguredTextForTndC">getConfiguredTextForTndC</option>
+    <option value="OfferPriceFilterImpl">OfferPriceFilterImpl</option>
+    <option value="getFaresList">getFaresList</option>
+    <option value="TelecomAccountingValidation">TelecomAccountingValidation</option>
+  </select>
+</div>
+</div>
+
+
+<script id="example">
+
+$(function() {
+    $('#api_picks').multiselect({
+        includeSelectAllOption: true
+    });
+    $("#api_picks").multiselect('selectAll', true);
+    $("#api_picks").multiselect('updateButtonText');
+});
+</script>
+<div class="form-group">
+    <input type="submit" class="btn btn-lg btn-sucess" id="update" value="Update Data"/>
+</div>
+</fieldset>
+</form>
+
+</body>
+</html>

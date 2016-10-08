@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post" action="/api">
+    <label>From Date put in format YYYY/MM/DD</label>
+  <input type="text" name="fromDate" value="{{ request.form.fromDate}}">
+    <br>
+     <label>To Date put in format YYYY/MM/DD</label>
+  <input type="text" name="toDate" value="{{ request.form.toDate}}">
+    <button type="submit" value="Submit" >SUBMIT</button>
+</form>
+</body>
+</html>

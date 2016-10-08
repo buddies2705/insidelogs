@@ -1,0 +1,26 @@
+from enum import Enum
+
+
+class LogKey(Enum):
+    SESSION_ID = 'sessionId'
+    REQUEST_ID = 'requestId'
+    DETAILS = 'details'
+    STACKTRACE = 'stackTrace'
+    CLASS_NAME = 'className'
+    MODULE = 'module'
+    API = 'api'
+    ERROR_CODE = 'errorCode'
+    ERROR_MESSAGE = 'errorMessage'
+    TIME_STAMP = 'timeStamp'
+    ACCOUNT = 'account'
+    SERVICE = 'service'
+    REQUEST = 'request'
+    RESPONSE = 'response'
+    RESPONSE_TIME = 'responseTime'
+    CATEGORY = 'category'
+    ACTION = 'action'
+    USER_IP_ADDRESS = 'userIpAddress'
+    SERVER_IP_ADDRESS = 'serverIpAddress'
+    USER_LOCATION = 'userLocation'
+    DEVICE_TYPE = 'deviceType'
+    HAS_ENCOUNTERED_EXCEPTION = 'hasEncounteredException'
